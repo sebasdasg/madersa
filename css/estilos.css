@@ -60,6 +60,22 @@ main article {
 .menu .contenedor-botones-menu .btn-menu-cerrar.activo {
     display: inline-block;
 }
+.menu .contenedor-botones-menu .logo-menu {
+    color: #ccc;
+    border: 1px solid transparent;
+    padding: 7px;
+    border-radius: 3px;
+    /* font-size: 14px; */
+    transition: all 0.3s ease-in;
+    display: inline;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, .4);
+}
+.menu .contenedor-botones-menu .logo-menu img {
+    position: relative;
+    top: 3px;
+    height: 22px;
+}
 
 .menu .contenedor-enlaces-nav {
     display: flex;
@@ -101,7 +117,7 @@ main article {
     padding: 7px;
     border-radius: 3px;
     font-size: 14px;
-    transition: all 0.3s ease-in
+    transition: all 0.3s ease-in;
 }
 
 .menu .contenedor-enlaces-nav .enlaces .enlaces_nav:hover {
@@ -445,7 +461,7 @@ main article {
     position: relative;
     width: 80px;
     height: 80px;
-    background: #fff;
+    background: rgb(255, 255, 255, 0.4);
     list-style: none;
     display: flex;
     justify-content: center;
@@ -454,7 +470,7 @@ main article {
 }
 
 .controles li:hover {
-    background: #ffeb3b;
+    background: rgb(228, 121, 17, 0.4);
 }
 
 .controles li::before {
@@ -474,7 +490,7 @@ main article {
 .content-hero {
     position: absolute;
     bottom: 0;
-    max-width: 700px;
+    max-width: 55%;
 }
 
 .content-hero div {
@@ -483,8 +499,7 @@ main article {
 
 .content-hero div.active {
     display: block;
-    padding: 30px;
-    padding-left: 100px;
+    padding: 20px 30px 70px 100px;
     background: rgba(0, 0, 0, 0.4);
 }
 
@@ -499,14 +514,80 @@ main article {
 }
 
 .content-hero div a {
-    color: #111;
+    color: #fff;
     font-size: 1.1em;
     display: inline-block;
     padding: 10px 30px;
-    background: #fff;
+    background: #E47911;
     margin-top: 10px;
-    font-weight: 400;
+    font-weight: 700;
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
+    border-radius: 12px;
+    border: 1px solid #E47911;
+    transition: 0.6s;
+
+}
+
+@media screen and (max-width: 1000px) {
+    .content-hero div.active {
+        padding-left: 80px;
+    }
+    .content-hero div h2 {
+        font-size: 1.8em;
+    }
+    .content-hero div p {
+        font-size: 1em;
+    }
+    .content-hero div a {
+        font-size: 1em;
+    }
+    .content-hero {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content-hero {
+        max-width: 80%;
+    }
+    .content-hero div.active {
+        padding-left: 60px;
+    }
+    .controles {
+        width: 60px;
+    }
+    .controles li {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-hero {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .content-hero div.active {
+        padding-left: 25px;
+    }
+    .content-hero div h2 {
+        font-size: 1.5em;
+    }
+    .content-hero div p {
+        font-size: 0.8em;
+    }
+    .content-hero div a {
+        font-size: 0.8em;
+    }
+    .controles {
+        width: 50px;
+    }
+    .controles li {
+        width: 50px;
+        height: 50px;
+    }
+    
 }

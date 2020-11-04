@@ -3,7 +3,8 @@ const btnDepartamentos = document.getElementById('btn-departamentos'),
     contenedorEnlacesNav = document.querySelector('#menu .contenedor-enlaces-nav'),
     contenedorSubCategorias = document.querySelector('#grid .contenedor-subcategorias'),
     esDispositivoMovil = () => window.innerWidth <= 800,
-    btnCerrarMenu = document.getElementById('btn-menu-cerrar');
+    btnCerrarMenu = document.getElementById('btn-menu-cerrar'),
+    logoMenu = document.getElementById('logo-menu');
 
 btnDepartamentos.addEventListener('mouseover', () => {
     if (!esDispositivoMovil()) {
@@ -47,6 +48,7 @@ btnDepartamentos.addEventListener('click', (e) => {
     e.preventDefault();
     grid.classList.add('activo');
     btnCerrarMenu.classList.add('activo');
+    logoMenu.style.display = 'none';
 });
 
 /**** Boton de regresar en el menu de categorias ****/
@@ -54,6 +56,8 @@ document.querySelector('#grid .categorias .btn-regresar').addEventListener('clic
     e.preventDefault();
     grid.classList.remove('activo');
     btnCerrarMenu.classList.remove('activo');
+    logoMenu.style.display = 'inline';
+    
 });
 
 /*****/
@@ -85,6 +89,7 @@ btnCerrarMenu.addEventListener('click', (e) => {
         elemento.classList.remove('activo');
     });
     document.querySelector('body').style.overflow = 'visible';
+    logoMenu.style.display = 'inline';
 });
 
 /**** Hero ****/
