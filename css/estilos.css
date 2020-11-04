@@ -64,7 +64,7 @@ main article {
     color: #ccc;
     border: 1px solid transparent;
     padding: 7px;
-    border-radius: 3px;
+    border-radius: 10px;
     /* font-size: 14px; */
     transition: all 0.3s ease-in;
     display: inline;
