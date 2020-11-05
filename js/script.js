@@ -93,8 +93,8 @@ btnCerrarMenu.addEventListener('click', (e) => {
 });
 
 /**** Hero ****/
-const imgHero = document.querySelector('.img-hero');
-const slides = imgHero.getElementsByTagName('img');
+const imgHero = document.querySelector('.column-left');
+const slides = imgHero.querySelectorAll('.contenido__column-left');
 var i = 0;
 
 function nextSlide(){
@@ -108,7 +108,7 @@ function prevSlide(){
     i = (i - 1 + slides.length) % slides.length;
     slides[i].classList.add('active');
 }
-
+/*
 const contentHero = document.querySelector('.content-hero');
 const slidesText = contentHero.getElementsByTagName('div');
 var j = 0;
@@ -123,4 +123,4 @@ function prevSlideText(){
     slidesText[j].classList.remove('active');
     j = (j - 1 + slidesText.length) % slidesText.length;
     slidesText[j].classList.add('active');
-}
+}*/
